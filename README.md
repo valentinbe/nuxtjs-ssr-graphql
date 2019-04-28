@@ -22,6 +22,14 @@ For example, if a function generates new content only periodically, you can spee
 
 Prerender your single-page apps — You can improve SEO and optimize sharing across various social networks by creating dynamic meta tags.
 
+Add the following IAM permissions to cloudbuild:
+Cloud Build Service Account
+Cloud KMS CryptoKey Decrypter
+Firebase Admin
+Service Account User
+Cloud Run Admin
+API Keys Admin
+
 > Nuxt.js project
 
 ## Build Setup

@@ -6,7 +6,7 @@
       {
         "source": "**",
         "run": {
-          "serviceId": "nuxtjs-ssr",
+          "serviceId": "nuxt-ssr",
           "region": "us-central1"
         }
       }

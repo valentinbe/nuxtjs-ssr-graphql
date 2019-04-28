@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <h1 class="mt-2">Dishes modified</h1>
+      <h1 class="mt-2">Dishes</h1>
       <div class="row">
         <div class="col-md-8">
           <div class="cart-columns">
