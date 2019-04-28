@@ -1,4 +1,6 @@
 steps:
+  - name: "gcr.io/cloud-builders/npm"
+    args: ["install", "typescript"]
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/$PROJECT_ID/4caa5271d3a0", "."]
 images:
