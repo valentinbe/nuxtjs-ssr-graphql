@@ -6,9 +6,9 @@ gcr.io/nuxt-server-239020
 
 gcloud auth configure-docker
 
-sudo docker tag 4caa5271d3a0 gcr.io/nuxt-server-239020/4caa5271d3a0:tag1
-sudo docker run -p 8080:8080 4caa5271d3a0
-sudo docker push gcr.io/nuxt-server-239020/4caa5271d3a0:tag1
+sudo docker build -t gcr.io/nuxt-server-239020/custom-name:tag1 .
+sudo docker run -p 8080:8080 ID
+sudo docker push gcr.io/nuxt-server-239020/custom-name:tag1
 
 firebase init hosting
 firebase deploy --only hosting
