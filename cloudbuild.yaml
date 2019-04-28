@@ -1,7 +1,25 @@
 steps:
+  # install typescript
   - name: "gcr.io/cloud-builders/npm"
     args: ["install", "typescript"]
+  # build the container image
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/4caa5271d3a0", "."]
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/nuxt-ssr", "."]
+  # push the container image to Container Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/$PROJECT_ID/nuxt-ssr"]
+  # Deploy container image to Cloud Run
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "beta",
+        "run",
+        "deploy",
+        "nuxt-ssr",
+        "--image",
+        "gcr.io/$PROJECT_ID/nuxt-ssr",
+        "--region",
+        "us-central1",
+      ]
 images:
-  - "gcr.io/$PROJECT_ID/4caa5271d3a0"
+  - "gcr.io/$PROJECT_ID/nuxt-ssr"
