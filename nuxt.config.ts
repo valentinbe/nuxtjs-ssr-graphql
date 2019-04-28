@@ -23,7 +23,7 @@ const config: NuxtConfiguration = {
    ** Build configuration
    */
   build: {},
-  modules: ["bootstrap-vue/nuxt", "@nuxtjs/axios"],
+  modules: ["@nuxtjs/dotenv", "bootstrap-vue/nuxt", "@nuxtjs/axios"],
   axios: {}
 };
 

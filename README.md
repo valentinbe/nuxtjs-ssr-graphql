@@ -1,11 +1,26 @@
 # client
 
-Typescript NuxtJs GraphQl SSR Docker Cloudrun
+Typescript NuxtJs GraphQl SSR Docker Cloudrun, firebase hosting
 
 gcr.io/nuxt-server-239020
 
 gcloud auth configure-docker
-sudo docker push gcr.io/nuxt-server-239020
+
+sudo docker tag 4caa5271d3a0 gcr.io/nuxt-server-239020/4caa5271d3a0:tag1
+sudo docker run -p 8080:8080 4caa5271d3a0
+sudo docker push gcr.io/nuxt-server-239020/4caa5271d3a0:tag1
+
+firebase init hosting
+firebase deploy --only hosting
+
+https://nuxt-server-239020.firebaseapp.com/
+
+Application is packaged in a container image. Then, using Firebase Hosting, I can direct HTTPS requests to trigger the containerized app to run.
+
+Cache dynamic content — You can configure caching of your dynamic content on a global CDN.
+For example, if a function generates new content only periodically, you can speed up your app by caching the generated content for at least a short period of time. You can also potentially reduce execution costs because the content is served from the CDN rather than via a triggered function or containerized app.
+
+Prerender your single-page apps — You can improve SEO and optimize sharing across various social networks by creating dynamic meta tags.
 
 > Nuxt.js project
 
